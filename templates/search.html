@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Search {% endblock title %}
+
+{% block body %}
+
+<div class="container my-4">
+        <h1 class="display-5"><b>Search Results :</b></h1>
+    {% if allposts|length < 1 %}
+    <h5>No search result</h5>
+
+            Try the suggestions below or type a new query above.
+
+    <p>Suggestions:</p>
+    <ul>
+        <li>
+        Check your spelling.
+        </li>
+        <li>
+            Try more general words.
+        </li>
+        <li>
+            Try different words that mean the same thing.
+        </li>
+    </ul>
+
+    {% else %}
+    <b>{{query}}</b>-{{allposts}}
+
+    {% endif %}
+
+
+</div>
+
+
+
+</div>
+{% endblock body %}
